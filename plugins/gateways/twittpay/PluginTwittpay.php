@@ -29,7 +29,7 @@ class Plugintwittpay extends GatewayPlugin
             ),
             lang("Endpoint URL") => array(
                 "type"        => "text",
-                "description" => "Your own gateway address, for example https://checkout.twittpay.com",
+                "description" => "Optional. Leave empty to use the default checkout address (https://checkout.twittpay.com)",
                 "value"       => ""
             ),
             lang("Brand Key") => array(
