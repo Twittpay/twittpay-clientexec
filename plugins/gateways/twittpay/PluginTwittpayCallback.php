@@ -25,7 +25,7 @@ class PlugintwittpayCallback extends PluginCallback
     function processCallback()
     {
         $settings = new Plugin('', 'twittpay', $this->user);
-        $apiUrl   = trim($settings->GetPluginVariable("plugin_twittpay_Endpoint URL"));
+        $apiUrl = 'https://checkout.twittpay.com';
         $apiKey   = trim($settings->GetPluginVariable("plugin_twittpay_API Key"));
 
         // A POST with no browser behind it is the webhook.

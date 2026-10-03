@@ -27,11 +27,6 @@ class Plugintwittpay extends GatewayPlugin
                 'description' => lang('Select the name to display in the signup process for this payment type. Example: eCheck or Credit Card.'),
                 'value'       => 'TwittPay'
             ),
-            lang("Endpoint URL") => array(
-                "type"        => "text",
-                "description" => "Optional. Leave empty to use the default checkout address (https://checkout.twittpay.com)",
-                "value"       => ""
-            ),
             lang("Brand Key") => array(
                 "type"        => "text",
                 "description" => "From your gateway dashboard, under Brands",
@@ -60,7 +55,7 @@ class Plugintwittpay extends GatewayPlugin
         $lastname  = isset($params['userLastName']) ? $params['userLastName'] : '';
         $email     = isset($params['userEmail']) ? $params['userEmail'] : '';
 
-        $apiUrl = trim($params['plugin_twittpay_Endpoint URL']);
+        $apiUrl = 'https://checkout.twittpay.com';
         $apiKey = trim($params['plugin_twittpay_API Key']);
         $rate   = $params['plugin_twittpay_USD to BDT Rate'];
 
